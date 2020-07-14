@@ -1,2 +1,72 @@
---buat Images--
+IMAGES
+
+--create Images--
 docker build -t "namafile"
+
+
+--hapus Images--
+docker image rm "nama tag_images"
+//untuk Image dapat dihapus, harus hapus container dulu
+
+
+CONTAINER
+
+--cek Container--
+docker ps
+
+
+--Create container--
+docker container --name (nama yg diinginkan) nama_images
+
+--Create container dengan port--
+docker container --name (nama yang diinginkan) ... -p 8080:8081 nama_images
+
+
+--Jalankan container--
+docker container start nama_container
+
+
+--daftar container yang sedang running--
+docker container ls
+
+--daftar semua container--
+docker container ls --all
+
+
+--hapus Container--
+docker stop "nama container id"
+docker rm "nama container id"
+
+
+LOGIN DOCKER HUB
+
+--untuk login docker hub--
+docker login -u 2099lidya
+atau juga
+docker login
+
+
+-- tag untuk images baru langsung--
+docker tag namatag 2099lidya/my-go-app:taglatest/versi
+
+--untuk push ke repository docker hub--
+docker push 2099lidya/my-go-app:latest
+
+--untuk download/pull images baik dari docker hub yg tag
+docker pull (nama yg didownload:versi)
+
+
+--untuk lihat log penampung--
+docker ps
+lalu
+docker log name_container/id
+
+
+--run langsung--
+docker run nama_container
+
+
+
+
+
+
