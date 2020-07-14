@@ -1,0 +1,2 @@
+--buat Images--
+docker build -t "namafile"
